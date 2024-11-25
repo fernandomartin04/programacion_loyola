@@ -1,0 +1,1 @@
+int esBisiesto(int ano);
