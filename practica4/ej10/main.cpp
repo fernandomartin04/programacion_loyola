@@ -12,16 +12,16 @@ int main() {
     cout << "Introduce el número de columnas: ";
     cin >> c;
 
-    // Llenar la matriz con datos
+    // Lleno la matriz con datos
     leer(matriz, f, c);
 
-    // Mostrar la matriz inicial
+    // Muestro la matriz inicial
     cout << "Así queda la matriz sin intercambiar nada: " << endl;
     mostrar(matriz, f, c);
 
     cout << endl << "¡Ahora puedes invertir dos filas!" << endl;
 
-    // Validar y leer las filas a intercambiar
+    // Valido y leo las filas pa intercambiar
     do {
         cout << "Selecciona correctamente las filas (números entre 0 y " << f - 1 << "):" << endl;
         cout << "Introduce el número de la primera fila: ";
@@ -30,10 +30,10 @@ int main() {
         cin >> fila2;
     } while (fila1 >= f || fila2 >= f || fila1 < 0 || fila2 < 0);
 
-    // Intercambiar las filas
+    // Intercambio las filas
     intercambiar(matriz, f, c, fila1, fila2);
 
-    // Mostrar la matriz final
+    // Muestro la matriz final
     cout << "Y así quedan intercambiadas las filas seleccionadas: " << endl;
     mostrar(matriz, f, c);
 
