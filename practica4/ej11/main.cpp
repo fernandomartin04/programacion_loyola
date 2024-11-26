@@ -20,11 +20,11 @@ int main() {
 	cout << "Así queda la matriz: " << endl;
 	mostrar(matriz, f, c);
 
-	media(matriz[][DIM],f,c,v[]);
+	media(matriz,f,c,v);
 	// Muestro el vecto finalcon la media
 	cout << "Y así queda un vector con la media de los elementos de cada columna: " << endl;
-	mostrarV(matriz, f, c);
-
+	mostrarV(v,c);
+	cout << endl;
 	return 0;
 }
 
