@@ -14,7 +14,6 @@ void leer(int matriz[][DIM], int f, int c) {
 }
 
 void mostrar(int matriz[][DIM], int f, int c) {
-    	cout << "La matriz queda así:" << endl;
     	for (int i = 0; i < f; i++) {
         	for (int j = 0; j < c; j++) {
             		cout << matriz[i][j] << " ";
