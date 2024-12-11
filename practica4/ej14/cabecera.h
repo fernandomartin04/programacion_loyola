@@ -1,3 +1,4 @@
+#include <iostream>
 struct matriz{
 	int nFil;
 	int nCol;
