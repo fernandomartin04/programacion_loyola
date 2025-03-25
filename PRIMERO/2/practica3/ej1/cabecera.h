@@ -5,7 +5,7 @@ private:
 	string nombre_empresa;
 public: 
 	// Constructor
-	Paquete(int id, int codigoDestino, string nombre_empresa); 
+	Paquete(int id = 0, int codigoDestino = 0, string nombre_empresa = 0); 
 	
 	// Metodos
 	int getCodigoDestino() const;
