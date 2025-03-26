@@ -1,41 +1,56 @@
 #include "cabecera.h"
 
-// Constructor
-Paquete::Paquete(int id, int codigoDestino, string nombre_empresa, float peso) {
+string Paquete::nombre_empresa = "NombreRandom";  // Definición de la variable estática
+
+Paquete::Paquete() {
+    this->id = 0;
+    this->codigoDestino = 0;
+}
+
+Paquete::Paquete(int id) {
     this->id = id;
-    this->codigoDestino = codigoDestino;
-    this->nombre_empresa = nombre_empresa;
+    this->codigoDestino = -1;
+}
+
+Paquete::Paquete(int id, float peso) {
+    // Inicializo
+    //  los atributos con los valores proporcionados
+    this->id = id;
     this->peso = peso;
 }
 
-// Getter de codigoDestino
-int Paquete::getCodigoDestino() const {
+int Paquete::getCodigoDestino() {
     return codigoDestino;
 }
 
-// Setter de codigoDestino
 bool Paquete::setCodigoDestino(int codigoDestino) {
-    if (codigoDestino > 9999) {
+    if (codigoDestino > 9999 && codigoDestino < 100000) {
         this->codigoDestino = codigoDestino;
         return true;
     }
     return false;
 }
 
-// Getter de peso
-float Paquete::getPeso() const {
-    return peso;
+string Paquete::toString() {
+    return "ID: " + to_string(id) + ", Codigo Destino: " + to_string(codigoDestino) + ", Empresa: " + nombre_empresa;
 }
 
-// Setter de peso
-void Paquete::setPeso(float peso) {
-    if (peso > 0) {
-        this->peso = peso;
-    }
+/// Paquete común
+// Primer punto
+PaqueteComun::PaqueteComun() : Paquete() {
+    this->peso = 0.0;
 }
 
-// Método toString para mostrar los datos del paquete
-string Paquete::toString() const {
-    return "ID: " + to_string(id) + ", Empresa: " + nombre_empresa + 
-           ", Destino: " + to_string(codigoDestino) + ", Peso: " + to_string(peso) + " kg";
+// Primer punto, segunda parte
+PaqueteComun::PaqueteComun(int id) : Paquete(id) {
+    this->peso = 0.0;
+}
+
+// Primer punto, tercera parte
+PaqueteComun::PaqueteComun(int id, float peso) : Paquete(id) {
+    this->peso = peso;
+}
+
+string PaqueteComun::toString() {
+    return Paquete::toString() + ", Peso: " + to_string(peso) + "kg";
 }

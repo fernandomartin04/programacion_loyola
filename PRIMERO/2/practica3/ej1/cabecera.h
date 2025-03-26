@@ -1,32 +1,32 @@
-class Paquete { 
-private: 
-	int id; 
-	int codigoDestino;
-	string nombre_empresa;
-public: 
-	// Constructor
-	Paquete(int id = 0, int codigoDestino = 0, string nombre_empresa = 0); 
-	
-	// Metodos
-	int getCodigoDestino() const;
-	bool setCodigoDestino(int codigoDestino); 
-	string toString(); 
-	
-};
-class PaqueteComun: public Paquete {
+#pragma once
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Paquete {
 private:
-	float peso;
-	float precio_por_kilo;
+    int id;
+    int codigoDestino;
+    static string nombre_empresa;
+
 public:
-	// Constructor
-	PaqueteComun(int id, int codigoDestino, string nombre_empresa, float peso, float precio_por_kilo);
-	
-	// Metodos
-	float getPeso() const;
-	bool setPeso(float peso);
-	float getPrecioPorKilo() const;
-	bool setPrecioPorKilo(float precio_por_kilo);
-	float calcularPrecio();
-	string toString();
+    Paquete();
+    Paquete(int id);
+	Paquete(int id, float peso);
+    int getCodigoDestino();
+    bool setCodigoDestino(int codigoDestino);
+    string toString();
 };
 
+class PaqueteComun : public Paquete {
+private:
+    float peso;
+    static float precio_por_kilo;
+
+public:
+    PaqueteComun();
+    PaqueteComun(int id);
+    PaqueteComun(int id, float peso);
+    float getPeso();
+    string toString();
+};
