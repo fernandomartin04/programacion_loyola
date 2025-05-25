@@ -14,5 +14,5 @@ class Persona{
         void setNombre(string nombre);
     // agregar modificadores si es necesario
 		string toString();
-        
+    
 };
