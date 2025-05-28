@@ -12,6 +12,6 @@ string Asignatura::toString() {
 	return "Nombre :" +nombre+" cuatrimestre: "+to_string(cuatrimestre)+" ,curso: "+to_string(curso)+" ,dificultad esperada: "+to_string(dificultad_esperada); 
 }
 
-float getDificultad() {
+float Asignatura::getDificultad() {
 	return dificultad_esperada;
 }
