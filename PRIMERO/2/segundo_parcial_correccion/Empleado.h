@@ -17,7 +17,7 @@ class Empleado : virtual public Persona{
         Empleado();
         Empleado(string nombre, int sueldo);
 
-// 0.2
+// 0.2 
         Empleado & operator=(const Empleado & otro);
 
 // 0.2
