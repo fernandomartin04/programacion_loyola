@@ -1,0 +1,6 @@
+Nombre: 1: Pedro
+Nombre: 2: luis
+Nombre: 3: jose
+Nombre: 4: gonzalo
+Nombre: 5: alfonso
+Nombre: 6: peri
