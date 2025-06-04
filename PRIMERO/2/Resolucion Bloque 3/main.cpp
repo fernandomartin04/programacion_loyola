@@ -1,93 +1,95 @@
 #include <iostream>
 #include <string>
-#include<fstream>
+#include <fstream>
+#include <iomanip>
 #include "Persona.h"
-
+#include "Tarjeta.h"
 #include <vector>
 
 using namespace std;
 
 template<typename container> int encontrarIndice(container personas, string dni_a_buscar);
 
-ifstream archivo = ifstream("personas.txt", ios::in);
-ifstream archivo2 = ifstream("tarjetas.txt", ios::in);
-
-
-ofstream salida = ofstream("resumen.txt", ios::out);
-
-istream& operator>>(istream& is, Persona& persona) {
-	is >> persona.DNI >> quoted(persona.nombre);
-	return  is;
-}
+ifstream archivo_personas = ifstream("personas.txt", ios::in);
+ifstream archivo_tarjetas = ifstream("tarjetas.txt", ios::in);
+ofstream archivo_resumen = ofstream("resumen.txt", ios::out);
 
 istream& operator>>(istream& is, Tarjeta& tarjeta) {
-	return  is >> tarjeta.ID >> tarjeta.nivel_acceso;
+	return is >> tarjeta.ID >> tarjeta.nivel_acceso;
+}
+istream& operator>>(istream& is, Persona& persona) {
+	return  is >> persona.DNI >> quoted(persona.nombre);
+}
+ostream& operator<<(ostream& os, Tarjeta& tarjeta){
+	if (&os == &archivo_resumen) {
+		return os << right << setw(3) << tarjeta.ID << setw(3) << tarjeta.nivel_acceso;
+	}
+}
+ostream& operator <<(ostream& os, Persona& persona) {
+	if (&os == &archivo_resumen) {
+		return os << left << setw(10) << persona.DNI << setw(25) << persona.nombre << persona.tarjeta;
+	}
 }
 
-ostream& operator<<(ostream& os, Tarjeta& tarjeta) {
-	return  os;
-}
-
-ostream& operator<<(ostream& os, Persona& persona) {
-	return  os << persona.DNI << " " << persona.nombre ;
-}
 
 
 int main() {
 
-	string DNI, nombre;
-	Persona p;
+	// EJERCICIO 1
 	vector<Persona> personas;
-
-	if(archivo){
-
+	if (archivo_personas) {
+		
+		Persona nueva_persona; // Creo objeto temp gracias al constructor vacio
 		string aux;
-
-		archivo >> aux  >> aux;
-		while(archivo >> p)// 61238746 "nombre apellido"
-		{
-			personas.push_back(p);
+		archivo_personas >> aux >> aux; // Me salto la primera linea
+		
+		while (archivo_personas >> nueva_persona) {
+			personas.push_back(nueva_persona);
 		}
-		archivo.close();
+		archivo_personas.close();
+		
+	} else {
+		cout << "Error al leer el archivo personas.txt" << endl;
 	}
-
-	Tarjeta t;
+	
+	// EJERCICIO 2
 	vector<Tarjeta> tarjetas;
 	vector<string> DNIs;
-
-	if(archivo2){
-
-		while(archivo2 >> t >> DNI)// 61238746 "nombre apellido"
-		{
-			tarjetas.push_back(t);
-			DNIs.push_back(DNI);
-		}
-		archivo2.close();
-	}
-
-	int idx = 0;
-	for (int i = 0; i < DNIs.size(); i++)
-	{
-		idx = encontrarIndice(personas, DNIs[i]);
-		if (idx != -1)
-		{
-			personas[idx].setTarjeta(tarjetas[i]);
-		}
-	}
-
-	if(salida){
-		for (int i = 0; i < personas.size(); i++)
-		{
-			salida << personas[i] << endl;
-		}
+	if (archivo_personas) {
 		
-
-		salida.close();
+		Tarjeta tarjeta; 
+		string dni;
+		
+		while (archivo_tarjetas >> tarjeta >> dni) {
+			tarjetas.push_back(tarjeta);
+			DNIs.push_back(dni);
+		}
+		archivo_tarjetas.close();
+		
+	} else {
+		cout << "Error al leer el archivo tarjetas.txt" << endl;
 	}
+	
+	// EJERCICIO 3
+	int indice = 0;
+	for (int i = 0; i < DNIs.size(); i++) {
+		indice = encontrarIndice(personas, DNIs[i]);
+		if (indice != -1) {
+			personas[indice].setTarjeta(tarjetas[i]);
+		}
+	}
+	if(archivo_resumen) {
 
+		for (int i = 0; i < personas.size(); i++) {
+			archivo_resumen << personas[i] << endl;
+		}
+		archivo_resumen.close();
+	}
 	
 	return 0;
 }
+
+
 
 template<typename container> int encontrarIndice(container personas, string dni_a_buscar) {
 	int indice = -1, busqueda = 0;
