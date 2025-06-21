@@ -1,18 +1,15 @@
 // declarar una vez esta clase
 #include<iostream>
-
+#include<string>
 using namespace std;
 
-class Persona{
-    // 0.1
+class Persona {
     protected:
-    // creo qu necesito mirar el diagrama otra vez
-        string nombre;
-    public:
+		string nombre;
+		
+	public:
 		Persona();
-		Persona(string);
-        void setNombre(string nombre);
-    // agregar modificadores si es necesario
-		string toString();
-    
+		Persona(string nombre);
+		void setNombre(string nombre);
+		virtual string toString();
 };

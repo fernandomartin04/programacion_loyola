@@ -1,15 +1,12 @@
 #include "ClienteEmpleado.h"
 
-// Constructor 0 por defecto
-ClienteEmpleado::ClienteEmpleado(){
-	descuento = 0;
+ClienteEmpleado::ClienteEmpleado() : Cliente() , Empleado() {
 }
-
 
 int ClienteEmpleado::getTotalCuenta() {
 	return total_cuenta*(1-descuento);
 }
 
 string ClienteEmpleado::toString() {
-	return "El nombre es: "+ nombre;
+	return Cliente::toString() + "\n" + Empleado::toString() + "\nDescuento: " + to_string(descuento);
 }

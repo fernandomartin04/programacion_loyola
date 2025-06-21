@@ -1,0 +1,24 @@
+Nivel 0-Renovables:
+Nivel 1-No Renovables:
+              "Eolica E1"
+              "Eolica E2"
+  "Solar Fotovoltaica S1"
+      "Solar Termica ST1"
+  "Termica Renovable TR1"
+              "Eolica E3"
+  "Solar Fotovoltaica S2"
+  "Termica Renovable TR2"
+Nivel 2-Nuclear:
+              "Carbon C1"
+    "Ciclo Combinado CC1"
+           "Fuel/Gas FG1"
+    "Ciclo Combinado CC2"
+              "Carbon C2"
+           "Fuel/Gas FG2"
+Nivel 3-Mixta y de Residuos:
+             "Nuclear N1"
+             "Nuclear N2"
+             "Nuclear N3"
+Nivel 4-:
+"Cogeneracion y Residuos CR1"
+"Cogeneracion y Residuos CR2"

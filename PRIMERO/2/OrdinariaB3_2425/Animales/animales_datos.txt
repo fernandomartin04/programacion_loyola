@@ -1,0 +1,20 @@
+Leon                     2-Casi amenazado          1.20;  2.54; 190.56
+Lobo                     0-Menor preocupacion      0.80;  1.57; 47.59
+Elefante asiatico        3-En peligro              2.95;  5.91; 5002.43
+Panda gigante            2-Casi amenazado          0.86;  1.82; 104.88
+Aguila calva             0-Menor preocupacion      0.69;  2.09;  1.76
+Pinguino africano        3-En peligro              0.63;  0.63;  4.01
+Tortuga verde            3-En peligro              0.53;  1.14; 148.47
+Gorila de montana        4-En peligro critico      1.69;  1.80; 163.23
+Jaguar                   1-Vulnerable              0.71;  1.46; 98.39
+Delfin comun             0-Menor preocupacion      0.55;  2.47; 86.35
+Avestruz                 0-Menor preocupacion      2.74;  2.06; 150.09
+Rana dardo venenosa      0-Menor preocupacion      0.06;  0.14;  0.19
+Koala                    2-Casi amenazado          0.76;  0.96; 10.91
+Ornitorrinco             1-Vulnerable              0.30;  0.52;  1.24
+Python reticulada        0-Menor preocupacion      0.24;  5.93; 71.33
+Tigre de bengala         3-En peligro              1.08;  3.05; 223.78
+Rinoceronte negro        4-En peligro critico      1.65;  3.55; 1404.41
+Lemur de cola anillada   3-En peligro              0.44;  0.70;  1.76
+Canguro rojo             0-Menor preocupacion      1.82;  2.06; 83.68
+Ballena azul             4-En peligro critico     30.03; 32.94; 149998.41

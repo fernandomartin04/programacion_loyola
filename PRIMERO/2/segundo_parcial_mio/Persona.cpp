@@ -1,22 +1,17 @@
 #include "Persona.h"
 
-// costructores..
-// Constructor vacio
 Persona::Persona() {
-	nombre = "Desconocido";
-}
-// Constructor principal
-Persona::Persona(string _nombre) {
-	nombre = _nombre;
+	this->nombre = "Desconocido";
 }
 
-void Persona::setNombre(string nombre){
-    this->nombre = nombre;
+Persona::Persona(string nombre) {
+	this->nombre = nombre;
+}
+
+void Persona::setNombre(string nombre) {
+	this->nombre = nombre;
 }
 
 string Persona::toString(){
-	
-    return nombre;
+	return "Nombre: " + nombre;
 }
-
-// Correcto funcionamiento probado de Persona.cpp y .h

@@ -1,24 +1,27 @@
 #include "Cliente.h"
 
-// Constructor 0 por defecto
-Cliente::Cliente() {
-	total_cuenta = 0;
+Cliente::Cliente : Persona() {
+	this->total_cuenta = 0;
 }
-// Constructor principal
-Cliente::Cliente(string _nombre) : Persona(_nombre) {
-	nombre = _nombre;
+
+Cliente::Cliente : Persona(nombre) {
+	this->total_cuenta = 0;
+}
+
+Cliente& Cliente::operator+=(const int & cantidad) {
+	total_cuenta += cantidad;
+	return *this;
+}
+
+Cliente& Cliente::operator+=(const int & cantidad){
+    total_cuenta += cantidad;
+    return *this;
 }
 
 int Cliente::getTotalCuenta() {
 	return total_cuenta;
-}
-Cliente& operator+=(cantidad: const int&){
-	this->total_cuenta += cantidad&;
-}
-Cliente& operator-=(cantidad: const int&){
-	this->total_cuenta -= cantidad&;
-}
+} 
 
 string Cliente::toString() {
-	return "El nombre es: "+ nombre;
+	return "Nombre: " + nombre + " Cuenta: " + to_string(total_cuenta);
 }

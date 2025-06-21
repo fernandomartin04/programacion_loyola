@@ -1,20 +1,31 @@
 #include "Empleado.h"
 
-// Constructor 0 por defecto
 Empleado::Empleado() {
-	sueldo = 12000;
-	nombre_empresa = "Ayesa";
+	this->sueldo = 1200;
 }
-// Constructor principal
-Empleado::Empleado(string _nombre, int _sueldo) : Persona(_nombre) {
-	nombre = _nombre;
-	sueldo = _sueldo;
+
+Empleado::Empleado(string nombre, int sueldo) : Persona(nombre) {
+	this->sueldo = sueldo;
 }
-	Empleado& operator=(const Empleado otro&) {
-		this->sueldo = otro&;
+
+Empleado& Empleado::operator=(const Empleado & otro) {
+	sueldo = otro.sueldo;
+	return *this;
+}
+
+bool Empleado::cobrarACliente(Cliente& c){
+	if (c.total_cuenta > 0) {
+        cout << nombre << "cobra al cliente " <<c.nombre << " un total de " << c.total_cuenta << "euros" << endl;
+		c.total_cuenta = 0;
+		return false
+	} else{
+		cout << "La cuenta del cliente " << c.nombre << " es invalida o nula" << endl;
+		return true;
+		
 	}
+	
+}
 
-
-string Empleado::toString() {
-	return "El nombre es: "+ nombre + ", el nombre de la empresa es: " +nombre_empresa; ;
+string Empleado::toString(){
+    return  "Nombre: " + nombre +" Sueldo: " + to_string(sueldo) + "\nNombre de la empresa: " + nombre_empresa;
 }

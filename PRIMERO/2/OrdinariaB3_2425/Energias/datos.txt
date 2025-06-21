@@ -1,0 +1,19 @@
+"Eolica E1" 14.532 0.0000 36.4521  
+"Eolica E2" 8.793 0.0000 34.1278  
+"Nuclear N1" 22.150 0.0125 91.3245  
+"Carbon C1" 5.784 0.8200 39.6512  
+"Ciclo Combinado CC1" 12.674 0.4000 52.7458  
+"Solar Fotovoltaica S1" 6.214 0.0000 21.5987  
+"Solar Termica ST1" 3.879 0.0000 19.4578  
+"Termica Renovable TR1" 4.582 0.0500 45.2347  
+"Cogeneracion y Residuos CR1" 2.671 0.2200 55.1246  
+"Nuclear N2" 18.987 0.0110 89.8563  
+"Fuel/Gas FG1" 7.893 0.6200 43.5874  
+"Ciclo Combinado CC2" 11.342 0.4100 54.8923  
+"Eolica E3" 16.421 0.0000 37.6254  
+"Solar Fotovoltaica S2" 5.674 0.0000 23.9842  
+"Termica Renovable TR2" 3.214 0.0400 44.8792  
+"Carbon C2" 6.543 0.8000 38.7615  
+"Fuel/Gas FG2" 8.231 0.6300 41.5643  
+"Cogeneracion y Residuos CR2" 3.792 0.2000 57.8934  
+"Nuclear N3" 20.564 0.0105 92.3457  

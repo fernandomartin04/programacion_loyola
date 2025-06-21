@@ -1,0 +1,20 @@
+"Leon" 2  
+"Lobo" 0  
+"Elefante asiatico" 3  
+"Panda gigante" 2  
+"Aguila calva" 0  
+"Pinguino africano" 3  
+"Tortuga verde" 3  
+"Gorila de montana" 4  
+"Jaguar" 1  
+"Delfin comun" 0  
+"Avestruz" 0  
+"Rana dardo venenosa" 0  
+"Koala" 2  
+"Ornitorrinco" 1  
+"Python reticulada" 0  
+"Tigre de bengala" 3  
+"Rinoceronte negro" 4  
+"Lemur de cola anillada" 3  
+"Canguro rojo" 0  
+"Ballena azul" 4  

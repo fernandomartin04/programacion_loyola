@@ -1,12 +1,17 @@
+#pragma once
 #include "Persona.h"
-class Empleado : virtual public Empleado{
-	protected: 
+#include "Cliente.h"
+#include<string>
+
+class Empleado : virtual public Persona {
+	protected:
 		int sueldo;
 		string nombre_empresa;
 	public:
 		Empleado();
-		Empleado(string, int, string);
-		Empleado& operator=(const Empleado otro&);
-		string toString();
-};
+		Empleado(string nombre, int sueldo);
+		Empleado & operator=(const Empleado & otro);
+		bool cobrarACliente(Cliente& c);
+		virtual string toString();
 
+}

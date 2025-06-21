@@ -1,0 +1,19 @@
+"Eolica E1" 1  
+"Eolica E2" 1  
+"Nuclear N1" 3  
+"Carbon C1" 2  
+"Ciclo Combinado CC1" 2  
+"Solar Fotovoltaica S1" 1  
+"Solar Termica ST1" 1  
+"Termica Renovable TR1" 1  
+"Cogeneracion y Residuos CR1" 4  
+"Nuclear N2" 3  
+"Fuel/Gas FG1" 2  
+"Ciclo Combinado CC2" 2  
+"Eolica E3" 1  
+"Solar Fotovoltaica S2" 1  
+"Termica Renovable TR2" 1  
+"Carbon C2" 2  
+"Fuel/Gas FG2" 2  
+"Cogeneracion y Residuos CR2" 4  
+"Nuclear N3" 3  

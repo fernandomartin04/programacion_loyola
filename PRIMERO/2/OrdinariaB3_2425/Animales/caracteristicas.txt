@@ -1,0 +1,20 @@
+"Leon" 1.1967 2.5407 190.56
+"Lobo" 0.8 1.5703 47.592
+"Elefante asiatico" 2.954 5.9138 5002.43
+"Panda gigante" 0.861 1.82 104.88
+"Aguila calva" 0.692 2.0936 1.76
+"Pinguino africano" 0.63 0.63 4.01
+"Tortuga verde" 0.534 1.138 148.47
+"Gorila de montana" 1.6914 1.8 163.226
+"Jaguar" 0.7089 1.46 98.39
+"Delfin comun" 0.546 2.467 86.3487
+"Avestruz" 2.74 2.0623 150.0922
+"Rana dardo venenosa" 0.061 0.137 0.1949
+"Koala" 0.76 0.96 10.9115
+"Ornitorrinco" 0.296 0.52 1.243
+"Python reticulada" 0.2361 5.9281 71.33
+"Tigre de bengala" 1.081 3.0466 223.7766
+"Rinoceronte negro" 1.65 3.546 1404.41
+"Lemur de cola anillada" 0.44 0.7 1.756
+"Canguro rojo" 1.8165 2.06 83.685
+"Ballena azul" 30.034 32.939 149998.407

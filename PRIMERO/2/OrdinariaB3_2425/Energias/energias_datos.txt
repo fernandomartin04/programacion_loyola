@@ -1,0 +1,19 @@
+Eolica E1                1-No Renovables          14.53;  0.00; 36.45
+Eolica E2                1-No Renovables           8.79;  0.00; 34.13
+Nuclear N1               3-Mixta y de Residuos    22.15;  0.01; 91.32
+Carbon C1                2-Nuclear                 5.78;  0.82; 39.65
+Ciclo Combinado CC1      2-Nuclear                12.67;  0.40; 52.75
+Solar Fotovoltaica S1    1-No Renovables           6.21;  0.00; 21.60
+Solar Termica ST1        1-No Renovables           3.88;  0.00; 19.46
+Termica Renovable TR1    1-No Renovables           4.58;  0.05; 45.23
+Cogeneracion y Residuos CR1  4-                        2.67;  0.22; 55.12
+Nuclear N2               3-Mixta y de Residuos    18.99;  0.01; 89.86
+Fuel/Gas FG1             2-Nuclear                 7.89;  0.62; 43.59
+Ciclo Combinado CC2      2-Nuclear                11.34;  0.41; 54.89
+Eolica E3                1-No Renovables          16.42;  0.00; 37.63
+Solar Fotovoltaica S2    1-No Renovables           5.67;  0.00; 23.98
+Termica Renovable TR2    1-No Renovables           3.21;  0.04; 44.88
+Carbon C2                2-Nuclear                 6.54;  0.80; 38.76
+Fuel/Gas FG2             2-Nuclear                 8.23;  0.63; 41.56
+Cogeneracion y Residuos CR2  4-                        3.79;  0.20; 57.89
+Nuclear N3               3-Mixta y de Residuos    20.56;  0.01; 92.35

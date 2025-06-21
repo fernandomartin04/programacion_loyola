@@ -1,13 +1,12 @@
-#include "Persona.h"
+#pragma once
 #include "Cliente.h"
-#include "Empleado.h"
+#include <string>
 
-class Empleado : public Persona, Cliente, Empleado{
-	private: 
-		float descuento;
+class ClienteEmpleado : public Cliente , public Empleado {
+	private:
+		static float descuento; // Static para que no cambie
 	public:
 		ClienteEmpleado();
 		int getTotalCuenta();
-		string toString();
-};
-
+		virtual string toString();
+}
