@@ -3,7 +3,7 @@
 using namespace std;
 
 template <class T>
-double Punto4D<T>::modulo() {
+double Punto4D<T>::modulo() const {
 	return sqrt(pow(x,2) + pow(y,2) + pow (z,2) + pow(w,2));
 }
 

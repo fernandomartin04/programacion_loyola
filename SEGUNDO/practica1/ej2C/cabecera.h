@@ -37,7 +37,7 @@ class Punto4D{
 		friend ostream& operator<<(ostream& os, const Punto4D<U>& p);
 		
 		// Modulo
-		double modulo();
+		double modulo() const;
 };
 
 #include "punto4d.cpp"
