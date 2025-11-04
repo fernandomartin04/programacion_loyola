@@ -1,4 +1,4 @@
-#include "cabecera.h"
+	#include "cabecera.h"
 
 string invertir(const string& cad, int i, int mitad) {
 	if (i < mitad) return "";

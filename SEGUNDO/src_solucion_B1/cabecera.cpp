@@ -75,24 +75,3 @@ map <string, float> getCiudadRatio(set <Instituto> const & s){
 	
 	return mp;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
