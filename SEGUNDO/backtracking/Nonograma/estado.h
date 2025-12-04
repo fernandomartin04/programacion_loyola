@@ -2,20 +2,23 @@
 #define ESTADO_H
 
 #include "solucion.h"
+#include <vector>
+
+class Problema; //declaracion adelantada
 
 class Estado {
 public:
     Solucion* sol;
+    Problema* prob;
     int posicion;
 
-    // Constructor por defecto se queda inline
     Estado() {
         sol = nullptr;
+        prob = nullptr;
         posicion = 0;
     }
-
-    // Este solo se declara, la implementacion esta en estado.cpp
-    Estado(Solucion* s);
+    
+    Estado(Solucion* s, Problema* p);
 
     void avanza(int valor);
     void retrocede(int valor);

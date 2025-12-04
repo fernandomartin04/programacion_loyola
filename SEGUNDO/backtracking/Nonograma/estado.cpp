@@ -1,10 +1,10 @@
 #include "estado.h"
 #include "solucion.h"
-#include "problema.h"
+#include "problema.h" 
 
-// Constructor
-Estado::Estado(Solucion *s) {
+Estado::Estado(Solucion *s, Problema *p) {
     this->sol = s;
+    this->prob = p; 
     this->posicion = 0;
 }
 
@@ -14,11 +14,18 @@ bool Estado::esFinal() {
 
 vector<int> Estado::getAlternativas() {
     vector<int> alternativas;
+    
+    int fila = posicion / sol->columnas;
+    int col  = posicion % sol->columnas;
 
-    // Alternativas: 0 (en blanco) y 1 (pintado)
-    alternativas.push_back(0);
-    alternativas.push_back(1);
+    int restriccion = prob->tableroInicial[fila][col];
 
+    if (restriccion == -1) {
+        alternativas.push_back(0);
+        alternativas.push_back(1);
+    } else {
+        alternativas.push_back(restriccion);
+    }
     return alternativas;
 }
 
@@ -30,7 +37,7 @@ void Estado::avanza(int valor) {
     posicion++;
 }
 
-void Estado::retrocede(int /* valor */) {
+void Estado::retrocede(int /*valor*/) {
     posicion--;
 
     int fila = posicion / sol->columnas;

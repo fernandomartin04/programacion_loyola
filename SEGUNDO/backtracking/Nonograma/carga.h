@@ -11,4 +11,3 @@ void cargarManzana(Problema &p);
 void cargarCorazon(Problema &p);
 
 #endif
-

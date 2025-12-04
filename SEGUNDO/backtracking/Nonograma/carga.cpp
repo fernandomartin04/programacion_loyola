@@ -20,6 +20,30 @@ void cargarTaza(Problema &p)
 
     p.filas = p.filasP.size();
     p.columnas = p.columnasP.size();
+    
+    // Inicializar restricciones a -1 (Desconocido)
+    p.tableroInicial.assign(p.filas, vector<int>(p.columnas, -1));
+
+    // =========================================================
+    // RESTRICCIONES LÓGICAS INICIALES (PRE-CÁLCULO)
+    // =========================================================
+    /*
+    p.tableroInicial[1][2] = 0;
+    p.tableroInicial[3][2] = 1;
+    p.tableroInicial[1][7] = 0;
+    p.tableroInicial[3][7] = 1;
+    */
+    for(int i=0; i<p.filas; i++) p.tableroInicial[i][0] = 0;
+
+    for(int j=0; j<p.columnas; j++) p.tableroInicial[5][j] = 0;
+
+    for(int j=1; j<15; j++) p.tableroInicial[8][j] = 1;
+
+    for(int j=2; j<=12; j++) p.tableroInicial[7][j] = 1;
+    p.tableroInicial[11][0] = 0; 
+    p.tableroInicial[11][1] = 0;
+    for(int j=2; j<=13; j++) p.tableroInicial[11][j] = 1;
+    p.tableroInicial[11][14] = 0;
 }
 
 
@@ -43,6 +67,8 @@ void cargarManzana(Problema &p)
 
     p.filas = p.filasP.size();
     p.columnas = p.columnasP.size();
+    
+    p.tableroInicial.assign(p.filas, vector<int>(p.columnas, -1));
 }
 
 // ==========================================================
@@ -64,5 +90,6 @@ void cargarCorazon(Problema &p)
 
     p.filas = p.filasP.size();
     p.columnas = p.columnasP.size();
+    
+    p.tableroInicial.assign(p.filas, vector<int>(p.columnas, -1));
 }
-
