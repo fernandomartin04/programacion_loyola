@@ -15,19 +15,19 @@ int main()
     
     clock_t ini, fin;
     
-    /* TODO Descomentar cuando haya implementado mario4
+    // TODO Descomentar cuando haya implementado mario4
     mostrarMario();
     ini = clock();
-    long int resultado = mario4(u,v,4);
+    long int resultado = mario4(u,v,8);
     fin = clock();
     cout << "Resultado: " << resultado << endl;
     cout << "Tiempo: " << ((double)(fin-ini))/CLOCKS_PER_SEC << " s" << endl << endl;
-    */
+    
 
     /* TODO Descomentar cuando haya implementado luigi3
     mostrarLuigi();
     ini = clock();
-    resultado = luigi3(u,v,4);
+    resultado = luigi3(u,v,8);
     fin = clock();
     cout << "Resultado: " << resultado << endl;
     cout << "Tiempo: " << ((double)(fin-ini))/CLOCKS_PER_SEC << " s" << endl << endl;

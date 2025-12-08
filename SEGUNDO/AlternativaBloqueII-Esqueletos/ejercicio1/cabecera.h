@@ -5,8 +5,10 @@
 
 //TODO apartado a) mario4
 
-//TODO apartado b) luigi3
+long int mario4(long int u, long int v, long int n);
 
+//TODO apartado b) luigi3
+//long int luigi3(long int u, long int v, long int n);
 
 #endif
 
