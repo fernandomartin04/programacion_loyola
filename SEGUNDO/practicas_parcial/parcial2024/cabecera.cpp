@@ -1,3 +1,4 @@
+#include "cabecera.h"
 float getValorMedio(list<Videojuego> const & l, float umbral) {
 	list<Videojuego>::const_iterator it = l.begin();
 	float valorMedio = 0;

@@ -48,10 +48,12 @@ void SolucionFestival::actualizarTiempoTotal()
 // TODO b) addCortoInSala
 void SolucionFestival::addCortoInSala(int id, Corto const & c)
 {
-
+    getSala(id).addCorto(c);
+    actualizarTiempoTotal();
 }
 // TODO c) deleteCortoInSala
 void SolucionFestival::deleteCortoInSala(int id, Corto const & c)
 {
-
+    getSala(id).deleteCorto(c);
+    actualizarTiempoTotal();
 }

@@ -42,6 +42,7 @@ class SolucionFestival
                     return *it;
                 it++;
             }
+            return salas.front();
         }
 
         void setSalas(list<Sala> const & s) { salas = s; }

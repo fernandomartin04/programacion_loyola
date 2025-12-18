@@ -12,9 +12,8 @@ Corto & Corto::operator=(Corto const & c)
 }
 
 // TODO a) sobrecarga del operador <
-bool Corto::operator < (Corto const & c) const
-{
-
+bool Corto::operator < (Corto const & c) const {
+    return getDuracion() < c.duracion;
 }
 
 void Corto::mostrar() const

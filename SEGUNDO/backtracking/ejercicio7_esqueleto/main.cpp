@@ -1,52 +1,86 @@
 #include<iostream>
-#include"problemaasignacion.h"
+#include<list>
+#include"objetomochila.h"
+#include"problemamochila.h"
+#include"solucionmochila.h"
 
 using namespace std;
 
 
+// comparison by name
+bool compare_name(ObjetoMochila const & first, ObjetoMochila const & second) {
+
+	return (first.getNombre() < second.getNombre());
+}
+
+// comparison by q
+bool compare_q(ObjetoMochila const & first, ObjetoMochila const & second) {
+
+	return (first.getQ() > second.getQ());
+}
+
 int main()
 {
-	int n=3;
-	int ** m = new int *[n];
-	for(int i=0; i<n; i++)
+	ObjetoMochila obj1("Obj1", 21, 6, 2);
+	ObjetoMochila obj2("Obj2", 30, 8, 2);
+	ObjetoMochila obj3("Obj3", 76, 16, 2);
+	ObjetoMochila obj4("Obj4", 48, 9, 2);
+	obj1.mostrar();
+	obj2.mostrar();
+	obj3.mostrar();
+	obj4.mostrar();
+	list<ObjetoMochila> l;
+	l.push_back(obj1);
+	l.push_back(obj2);
+	l.push_back(obj3);
+	l.push_back(obj4);
+	
+	cout << endl << endl << "Lista añadida inicialmente: " << endl;
+	list <ObjetoMochila>::iterator it = l.begin();
+	while(it!=l.end())
 	{
-		m[i]=new int[n];
+		it->mostrar();
+		it++;
 	}
 	
-	string * nombres = new string[n];
-	
-	//Rellenamos un ejemplos
-	m[0][0]=4;
-	m[0][1]=9;
-	m[0][2]=1;
-	m[1][0]=7;
-	m[1][1]=2;
-	m[1][2]=3;
-	m[2][0]=8;
-	m[2][1]=3;
-	m[2][2]=5;
-	
-	nombres[0]="Antonio";
-	nombres[1]="Pedro";
-	nombres[2]="Juan";
-	
-	ProblemaAsignacion p1(m,nombres,n);
-	ProblemaAsignacion p2(m,nombres,n);
-	
-	cout << "Voraz: " << endl;
-	SolucionAsignacion sV = p1.ejecutaVoraz();
-	sV.mostrar();
-	
-	cout << "Backtracking: " << endl;
-	SolucionAsignacion sBt = p2.ejecutaBacktracking();
-	sBt.mostrar();
-	
-	for(int i=0; i<n; i++)
+	cout << endl << endl << "Lista ordenada por operador por defecto < (q): " << endl;
+	l.sort();
+	it = l.begin();
+	while(it!=l.end())
 	{
-		delete [] m[i];
+		it->mostrar();
+		it++;
 	}
 	
-	delete [] m;
-
-	return 0;
+//	cout << endl << endl << "Lista ordenada por nombre: " << endl;
+//	l.sort(compare_name);
+//	it = l.begin();
+//	while(it!=l.end())
+//	{
+//		it->mostrar();
+//		it++;
+//	}
+	
+//	cout << endl << endl << "Lista ordenada por nombre: " << endl;
+//	//Comprobar con compare_name y ver que ocurre
+//	l.sort(compare_name);
+//	it = l.begin();
+//	while(it!=l.end())
+//	{
+//		it->mostrar();
+//		it++;
+//	}
+	
+	ProblemaMochila p(l,45);
+	SolucionMochila s = p.ejecutaVoraz();
+	cout << endl << endl <<  "Solucion Mochila Voraz Recursivo Ordenado:" << endl;
+	s.mostrar();
+	
+	
+	ProblemaMochila p2(l,45);
+	SolucionMochila s2 = p2.ejecutaBacktracking();
+	cout << endl << endl <<  "Solucion Mochila Backtraking Ordenado:" << endl;
+	s2.mostrar();
+		
+	
 }

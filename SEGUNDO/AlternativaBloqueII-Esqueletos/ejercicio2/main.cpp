@@ -35,7 +35,7 @@ int main()
     showList(l);
 
     int n = 3;
-    /* TODO Descomentar cuanto tenga implementado el algoritmo voraz
+    /*TODO Descomentar cuanto tenga implementado el algoritmo voraz
     cout << endl << "Algoritmo Voraz (Luigi) **********************" << endl;
     ProblemaFestival p1(l, n);
     SolucionFestival s1 = p1.ejecutaVoraz();

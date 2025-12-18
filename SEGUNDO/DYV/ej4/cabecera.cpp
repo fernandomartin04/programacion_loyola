@@ -1,7 +1,5 @@
 #include "cabecera.h"
 
-
-
 int multiplicador(int** m, int x0, int x1, int y0, int y1) {
 	int producto = 1;
 	for(int i = x0; i<x1; i++) {
@@ -35,7 +33,6 @@ int equiProducto(int** m, int x0, int x1, int y0, int y1) {
 
 	
 }
-
 
 int equiProducto(int** m, int n) {
 	return equiProducto(m, 0, n, 0, n);
