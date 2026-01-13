@@ -16,7 +16,6 @@ void Robot::show() {
 
 //TODO b) Funcion dobleCargaBateria
 
-
 int dobleCargaBateria(Robot *v, int i, int n) {
 	if(n == 1) {
 		return v[i].getCargaBateria();

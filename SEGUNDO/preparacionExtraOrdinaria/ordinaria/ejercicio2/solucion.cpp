@@ -16,7 +16,7 @@ Solucion & Solucion::operator = (Solucion const & s)
 // TODO operador >
 bool Solucion::operator > (Solucion const & s) const
 {
-	return getPrecisionTotal() > s.getPrecisionTotal();
+
 }
 
 //Funcion de salida
@@ -34,19 +34,10 @@ void Solucion::mostrar() const
 //TODO Funciones para insertar y eliminar
 void Solucion::addZona(Zona const & z)
 {
-	if(z.getCantidad()) {
-		zonas.push_back(z);
-		zonas_usadas.insert(z.getCodZona());
-		sensores_asignados.insert(z.getSensor().getCodSensor());
-		setPrecisionTotal(getPrecisionTotal() + z.getSensor().getNivelPrecision());
-	}
 	
 }
 
 void Solucion::deleteZona(Zona const & z)
 {
-	zonas.pop_back(); // Borramos porque borraremos lo que se puso ultimo
-	zonas_usadas.erase(z.getCodZona()); // Borro el que tiene ese codigo que ademas fue el ultimo en meterse
-	sensores_asignados.erase(z.getSensor().getCodSensor());
-	setPrecisionTotal(getPrecisionTotal() - z.getSensor().getNivelPrecision());
+
 }
