@@ -11,6 +11,7 @@ void Estado::avanza(Zona const & z)
     sol.addZona(z);
 }
 
+
 void Estado::retrocede(Zona const & z)
 {
     setNVisitados(getNvisitados() - 1);
