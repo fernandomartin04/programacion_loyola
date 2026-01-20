@@ -16,7 +16,7 @@ Solucion & Solucion::operator = (Solucion const & s)
 // TODO operador >
 bool Solucion::operator > (Solucion const & s) const
 {
-
+	return getPrecisionTotal() > s.getPrecisionTotal();
 }
 
 //Funcion de salida
@@ -34,10 +34,16 @@ void Solucion::mostrar() const
 //TODO Funciones para insertar y eliminar
 void Solucion::addZona(Zona const & z)
 {
-	
+	zonas.push_back(z);
+	zonas_usadas.insert(z.getCodZona());
+	setPrecisionTotal(getPrecisionTotal() + z.getSensor().getNivelPrecision());
+	sensores_asignados.insert(z.getSensor().getCodSensor());
 }
 
 void Solucion::deleteZona(Zona const & z)
 {
-
+	zonas.pop_back();
+	zonas_usadas.erase(z.getCodZona());
+	sensores_asignados.erase(z.getSensor().getCodSensor());
+	setPrecisionTotal(getPrecisionTotal()-z.getSensor().getNivelPrecision());
 }
