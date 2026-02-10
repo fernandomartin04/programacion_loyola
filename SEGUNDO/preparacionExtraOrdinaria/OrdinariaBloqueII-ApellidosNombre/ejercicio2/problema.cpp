@@ -10,6 +10,7 @@ Solucion Problema::ejecutaBacktracking()
     Estado e(getN());
 	bt(e);
 	return getMejorSolucion();
+    
 }
 
 void Problema::bt(Estado & e)
@@ -38,3 +39,5 @@ void Problema::actualizaMejorSolucion(Estado & e)
     }
     
 }
+
+
