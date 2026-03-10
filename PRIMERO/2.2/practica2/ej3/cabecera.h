@@ -8,7 +8,7 @@ class Ascensor {
         int plantaActual;
         bool puertaAbierta;
     public:
-        Ascensor(int plantaActual = "0", puertaAbierta = false;) {
+        Ascensor(int plantaActual = "0", puertaAbierta = false) {
             this->plancaActual=plancaActual;
             this->puertaAbierta=puertaAbierta;
         }
