@@ -1,8 +1,5 @@
 #include "empleado.h"
-Empleado::~Empleado(){
-    cout << "Se ha llamado al destructor" << endl;
-}
-
+string Empleado::nombre_empresa = "";
 Empleado::Empleado() {
     nombre = "";
     id = 0;
@@ -15,4 +12,8 @@ Empleado::Empleado(string nombre, int id) {
 
 float Empleado::calcularSalario() {
     return 0;
+}
+
+Empleado::~Empleado(){
+    cout << "Se ha llamado al destructor" << endl;
 }
