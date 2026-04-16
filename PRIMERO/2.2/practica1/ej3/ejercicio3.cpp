@@ -1,4 +1,4 @@
-#include "ejercicio2.h"
+#include "ejercicio3.h"
 
 void segundosAHorario(int totalSegundos, int& horas, int& minutos, int& segundos) {
     segundos = totalSegundos % 60;

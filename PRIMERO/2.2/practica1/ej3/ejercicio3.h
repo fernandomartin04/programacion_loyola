@@ -1,5 +1,5 @@
-#ifndef EJERCICIO2_H
-#define EJERCICIO2_H
+#ifndef EJERCICIO3_H
+#define EJERCICIO3_H
 
 #include <iostream>
 using namespace std;

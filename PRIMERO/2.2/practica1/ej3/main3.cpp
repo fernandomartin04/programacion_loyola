@@ -1,7 +1,7 @@
-#include "ejercicio2.h"
+#include "ejercicio3.h"
 
 int main() {
-    int totalSegundos = 3671;
+    int totalSegundos = 3991;
     int horas = 0;
     int minutos = 0;
     int segundos = 0;
