@@ -11,8 +11,8 @@ class Jugador {
     public:
         Jugador();
         Jugador(string nombre, int dorsal);
-        int calcularValoracion();
-        string toString();
-}
+        virtual int calcularValoracion();
+        virtual string toString();
+};
 
 #endif
