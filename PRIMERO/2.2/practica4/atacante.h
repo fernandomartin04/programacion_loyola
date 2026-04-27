@@ -2,13 +2,13 @@
 #define ATACANTE_H
 #include "jugador.h"
 
-class Atacante : public Jugador {
-    private:
+class Atacante : public virtual Jugador {
+    protected:
         int goles_marcados;
     public:
         Atacante();
         Atacante(string nombre, int dorsal, int goles_marcados);
-        int calcularValoracion();
+        float calcularValoracion();
         string toString();
 };
 
