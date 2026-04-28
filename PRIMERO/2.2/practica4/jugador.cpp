@@ -51,8 +51,16 @@ void Jugador::agregarClub(string club) {
 }
 
 Jugador& Jugador::operator=(const Jugador& otro) {
-    if (this != otro) {
+    if (this != &otro) {
         delete historial_clubes;
-        
+        nombre = otro.nombre;
+        dorsal = otro.dorsal;
+        nro_partidos = otro.nro_partidos;
+        if (otro.historial_clubes != nullptr) {
+            historial_clubes = new string(*otro.historial_clubes);
+        } else {
+            historial_clubes = nullptr;
+        }
     }
+    return *this;
 }
