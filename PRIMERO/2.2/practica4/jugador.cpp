@@ -25,7 +25,6 @@ Jugador::Jugador(Jugador const &otro) {
             historial_clubes = nullptr;
         }
     }
-    return *this;
 }
 
 Jugador::~Jugador() {
